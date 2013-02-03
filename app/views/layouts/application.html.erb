@@ -10,13 +10,13 @@
   <![endif]-->
 </head>
 <body>
-	<header class="navbar navbar-fixed-top">
+	<header class="navbar navbar-fixed-top" >
 		<div class="container">
-			<%= link_to "Haggendazz", '#', :id => "logo" %>
+			<%= link_to "Haggendazz", root_path, :id => "logo" %>
 			<nav>
 				<ul class="nav pull-right">
-					<li><%= link_to "Home", '#' %></li>
-					<li><%= link_to "Help", '#' %></li>
+					<li><%= link_to "Home", root_path %></li>
+					<li><%= link_to "Help", help_path %></li>
 					<li><%= link_to "Sign in", '#' %></li>
 				</ul>
 			</nav>
@@ -24,6 +24,7 @@
 	</header>
 	<div class="container">
 		<%= yield %>
+		<%= render 'layouts/footer' %>
 	</div>
 </body>
 </html>
