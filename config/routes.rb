@@ -4,6 +4,7 @@ FirstApp::Application.routes.draw do
   match '/help', :to => 'static_pages#help'
   match '/about', :to => 'static_pages#about'
   match '/contact', :to => 'static_pages#contact'
+  match '/signup', :to => 'users#new'
   
   get "static_pages/home"
 
@@ -12,6 +13,8 @@ FirstApp::Application.routes.draw do
   get "static_pages/about"
   
   get "static_pages/contact"
+  
+  get "users/new"
 
   resources :microposts
 
